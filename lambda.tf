@@ -41,13 +41,13 @@ resource "aws_lambda_function" "lambda_transfer_ddb_streaming_data_prescription"
 
 # Event Source Mapping
 resource "aws_lambda_event_source_mapping" "streaming_prescription" {
-  event_source_arn  = "${var.prescription_streaming_arn}"
-  function_name     = "${aws_lambda_function.lambda_transfer_ddb_streaming_data_prescription.arn}"
-  starting_position = "LATEST"
-  batch_size = 100
-  maximum_retry_attempts = 5
+  event_source_arn              = "${var.prescription_streaming_arn}"
+  function_name                 = "${aws_lambda_function.lambda_transfer_ddb_streaming_data_prescription.arn}"
+  starting_position             = "LATEST"
+  batch_size                    = 100
+  maximum_retry_attempts        = 5
   maximum_record_age_in_seconds = 604800
-  parallelization_factor = 5
+  parallelization_factor        = 5
 }
 
 #---------------------------------------------------

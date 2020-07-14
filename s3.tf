@@ -8,8 +8,8 @@ Terraform version over 12.0
 */
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket        = "${var.s3_bucket_name}"
-  acl           = "private"
+  bucket = "${var.s3_bucket_name}"
+  acl    = "private"
   versioning {
     enabled = true
   }

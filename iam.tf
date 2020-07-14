@@ -116,16 +116,16 @@ data "aws_iam_policy_document" "firehose-role_policy" {
   statement {
     effect = "Allow"
     actions = [
-        "s3:PutObject",
-        "s3:List*",
-        "s3:Get*",
-        "s3:AbortMultipartUpload",
-        "logs:PutLogEvents",
-        "lambda:InvokeFunction",
-        "lambda:GetFunctionConfiguration",
-        "kinesis:Get*",
-        "kinesis:Describe*",
-        "glue:GetTableVersions"
+      "s3:PutObject",
+      "s3:List*",
+      "s3:Get*",
+      "s3:AbortMultipartUpload",
+      "logs:PutLogEvents",
+      "lambda:InvokeFunction",
+      "lambda:GetFunctionConfiguration",
+      "kinesis:Get*",
+      "kinesis:Describe*",
+      "glue:GetTableVersions"
     ]
     resources = [
       "*",

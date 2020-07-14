@@ -33,15 +33,15 @@ resource "aws_lambda_function" "lambda_execute_sql_to_rds_prescription" {
     subnet_ids         = "${var.subnet_ids}"
     security_group_ids = "${var.security_group_ids}"
   }
-  
+
   environment {
     variables = {
-      DB_NAME = "${var.db_name}"
-      DB_USER = "${var.db_user}"
-      DB_PASSWORD = "${var.db_password}"
+      DB_NAME         = "${var.db_name}"
+      DB_USER         = "${var.db_user}"
+      DB_PASSWORD     = "${var.db_password}"
       AURORA_ENDPOINT = "${var.aurora_endpoint}"
-      TABLE_NAME = "${var.prescription_table}"
-      TABLE_SCHEMA = "${var.prescription_schema}"
+      TABLE_NAME      = "${var.prescription_table}"
+      TABLE_SCHEMA    = "${var.prescription_schema}"
     }
   }
 
