@@ -3,6 +3,8 @@ profile="kakehashi-sandbox-terraform"
 env="sandbox"
 s3_bucket_name="s3bucket-sandbox-kamikaze2"
 
+prescription_streaming_arn="arn:aws:dynamodb:ap-northeast-1:158847477727:table/test-prescription/stream/2020-07-14T12:41:53.964"
+
 db_name="kamikaze2"
 db_user="admin"
 db_password="passw0rd"

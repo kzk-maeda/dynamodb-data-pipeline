@@ -49,3 +49,12 @@ resource "aws_lambda_function" "lambda_execute_sql_to_rds_prescription" {
     project = "kamikaze2"
   }
 }
+
+# S3 Trigger Configuration
+resource "aws_lambda_permission" "allow_bucket_prescription" {
+  statement_id  = "AllowExecutionFromS3Bucket"
+  action        = "lambda:InvokeFunction"
+  function_name = "${aws_lambda_function.lambda_execute_sql_to_rds_prescription.arn}"
+  principal     = "s3.amazonaws.com"
+  source_arn    = "${aws_s3_bucket.s3_bucket.arn}"
+}

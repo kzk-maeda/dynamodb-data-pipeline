@@ -6,6 +6,8 @@ variable "env" {
 variable "profile" {}
 variable "s3_bucket_name" {}
 
+variable "prescription_streaming_arn" {}
+
 variable "db_name" {}
 variable "db_user" {}
 variable "db_password" {}

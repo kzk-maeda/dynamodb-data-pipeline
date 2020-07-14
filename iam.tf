@@ -41,7 +41,13 @@ data "aws_iam_policy_document" "lambda-role_policy" {
       "firehose:*",
       "ec2:*",
       "rds-data:*",
-      "dbqms:*"
+      "dbqms:*",
+      "dynamodb:BatchGetItem",
+      "dynamodb:Describe*",
+      "dynamodb:List*",
+      "dynamodb:Get*",
+      "dynamodb:Query",
+      "dynamodb:Scan"
     ]
     resources = [
       "*",
