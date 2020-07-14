@@ -4,7 +4,6 @@ Terraform code to configure S3 backend resources
 Terraform version over 12.0
 
 @author     kzk_maeda
-@copyright  2020-2021 Cozre. inc
 @version    0.1
 */
 

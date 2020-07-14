@@ -3,4 +3,4 @@ variable "env" {
   description = "enter (tst|dev|prd)"
 }
 variable "profile" {}
-variable "s3_tfstate_bucket_name" {}
+variable "s3_bucket_name" {}
