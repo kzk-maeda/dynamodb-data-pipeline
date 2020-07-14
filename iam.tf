@@ -39,7 +39,9 @@ data "aws_iam_policy_document" "lambda-role_policy" {
       "s3:CreateJob",
       "s3:HeadBucket",
       "firehose:*",
-      
+      "ec2:*",
+      "rds-data:*",
+      "dbqms:*"
     ]
     resources = [
       "*",
